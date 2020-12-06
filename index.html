@@ -21,6 +21,7 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 			window.scrollTo(0, 1);
 		}
 	</script>
+	<script type="text/javascript" src="js/predicition.js"></script>
 	<!-- //for-mobile-apps -->
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -29,17 +30,9 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 	<!-- //gallery -->
 	<!-- font-awesome icons -->
 	<link href="css/font-awesome.css" rel="stylesheet">
-
-	<!-- //font-awesome icons -->
-	<link href="//fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-	<link href="//fonts.googleapis.com/css?family=Jura:300,400,500,600" rel="stylesheet">
-	<link
-		href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
-		rel='stylesheet' type='text/css'>
-
 </head>
 
-<body>
+<body style="background-color: black;">
 	<div class="w3_navigation">
 		<div class="container">
 			<nav class="navbar navbar-default">
@@ -52,19 +45,19 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 						<span class="icon-bar"></span>
 					</button>
 					<div class="w3_navigation_pos">
-						<h1><a href="index.html" title="Gaming Wonderland">IPL Fever</a></h1>
+						<h1 style="color: white;"><a href="index.html"><span style="color: white;">IPL SITE</span></a></h1>
 					</div>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 					<nav class="cl-effect-5" id="cl-effect-5">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="index.html"><span data-hover="Home">Home</span></a></li>
+							<li class="active" style="color: white;"><a href="index.html"><span data-hover="Home">Home</span></a></li>
 
-							<li><a href="#about" class="scroll"><span data-hover="About">About</span></a></li>
-							<li><a href="#services" class="scroll"><span data-hover="Services">Services</span></a></li>
-							<li><a href="#work" class="scroll"><span data-hover="Gallery">Gallery</span></a></li>
-							<li><a href="#projects" class="scroll"><span data-hover="News">News</span></a></li>
+							<li><a href="#about" class="scroll" style="color: white;"><span data-hover="About">About</span></a></li>
+							<li><a href="#services" class="scroll" style="color: white;"><span data-hover="Services">Services</span></a></li>
+							<li><a href="#work" class="scroll" style="color: white;"><span data-hover="Gallery">Gallery</span></a></li>
+							<li><a href="#projects" class="scroll" style="color: white;"><span data-hover="News">News</span></a></li>	
 						</ul>
 					</nav>
 				</div>
@@ -230,9 +223,67 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 	<!-- //services -->
 
 	<!-- prediction part of the website starts-->
-
 	
+	<div class="predictions-div" id="predictions-id" style="background-color: black;">
+		<br><br><br>
+		<h3 class="w3l_head w3l_head1" style="color: white;">Match Predictions</h3>
+		<div class="services-agile-w3l">
+			<div class="col-md-3 services-gd text-center">
+				<label for="team1"><h3 style="color: white;">Choose the home team</h3></label>
+				<br><br>
+				<select name="team1" id="team1">
+					<option value="CSK">CSK</option>
+					<option value="MI">MI</option>
+					<option value="RCB">RCB</option>
+					<option value="DC">DC</option>
+					<option value="KXIP">KXIP</option>
+					<option value="RR">RR</option>
+					<option value="KKR">KKR</option>
+					<option value="SRH">SRH</option>
+				</select>
+			</div>
 
+			<div class="col-md-3 services-gd text-center">
+				<label for="team2"><h3 style="color: white;">Choose the away team</h3></label>
+				<br><br>
+				<select name="team2" id="team2">
+					<option value="CSK">CSK</option>
+					<option value="MI">MI</option>
+					<option value="RCB">RCB</option>
+					<option value="DC">DC</option>
+					<option value="KXIP">KXIP</option>
+					<option value="RR">RR</option>
+					<option value="KKR">KKR</option>
+					<option value="SRH">SRH</option>
+				</select>			
+			</div>
+
+			<div class="col-md-3 services-gd text-center">
+				<label for="place"><h3 style="color: white;">Where will the match be played?</h3></label>
+				<br><br>
+				<select name="place" id="place">
+					<option value="Chennai">Chennai</option>
+					<option value="Mumbai">Mumbai</option>
+					<option value="Bengaluru">Bengaluru</option>
+					<option value="Delhi">Delhi</option>
+					<option value="Dharamsala">Dharamsala</option>
+					<option value="Jaipur">Jaipur</option>
+					<option value="Kolkata">Kolkata</option>
+					<option value="Hyderabad">Hyderabad</option>
+				</select>			
+			</div>
+
+			
+			<div class="col-md-3 services-gd text-center">
+				<br><br>
+				<button type="submit" onclick="predict()">Predict the match</button>		
+			</div>	
+		</div>
+
+		<div id="final-result" style="visibility: hidden;">
+			<div class="result" style="color: white; justify-content: center; font-size: large;";><span id="winning-team"></span> has a winning percentage of <span id="winning-percentage"></span></div>
+		</div>
+	</div>
 	<!-- prediction part ends -->
 
 
@@ -249,7 +300,6 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 							<a href="#">
 								<img src="images/ipl1.jpg" alt=" " class="img-responsive" />
 								<div class="overbox">
-									<h4 class="title overtext"> Gaming Wonderland</h4>
 
 								</div>
 							</a>
@@ -261,7 +311,6 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 							<a href="#">
 								<img src="images/ipl5.jpg" alt=" " class="img-responsive" />
 								<div class="overbox">
-									<h4 class="title overtext"> Gaming Wonderland</h4>
 
 								</div>
 							</a>
@@ -273,7 +322,6 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 							<a href="#">
 								<img src="images/ipl6.jpg" alt=" " class="img-responsive" />
 								<div class="overbox">
-									<h4 class="title overtext"> Gaming Wonderland</h4>
 
 								</div>
 							</a>
@@ -285,7 +333,6 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 							<a href="#">
 								<img src="images/p11.jpg" alt=" " class="img-responsive" />
 								<div class="overbox">
-									<h4 class="title overtext"> Gaming Wonderland</h4>
 
 								</div>
 							</a>
@@ -297,7 +344,6 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 							<a href="#">
 								<img src="images/ipl8.jpg" alt=" " class="img-responsive" />
 								<div class="overbox">
-									<h4 class="title overtext"> Gaming Wonderland</h4>
 
 								</div>
 							</a>
@@ -309,7 +355,6 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 							<a href="#">
 								<img src="images/ipl9.jpg" alt=" " class="img-responsive" />
 								<div class="overbox">
-									<h4 class="title overtext"> Gaming Wonderland</h4>
 
 								</div>
 							</a>
@@ -321,7 +366,6 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 							<a href="#">
 								<img src="images/ipl10.jpg" alt=" " class="img-responsive" />
 								<div class="overbox">
-									<h4 class="title overtext"> Gaming Wonderland</h4>
 
 								</div>
 							</a>
@@ -333,7 +377,6 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 							<a href="#">
 								<img src="images/ipl11.jpg" alt=" " class="img-responsive" />
 								<div class="overbox">
-									<h4 class="title overtext"> Gaming Wonderland</h4>
 
 								</div>
 							</a>
@@ -345,7 +388,6 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 							<a href="#">
 								<img src="images/ipl12.jpg" alt=" " class="img-responsive" />
 								<div class="overbox">
-									<h4 class="title overtext"> Gaming Wonderland</h4>
 
 								</div>
 							</a>
