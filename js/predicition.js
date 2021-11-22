@@ -9,19 +9,19 @@ function teamNumber(team){
         return 3;
     }
     else if(team=="DC"){
-        return 2;
+        return 4;
     }
     else if(team=="KXIP"){
-        return 2;
+        return 5;
     }
     else if(team=="RR"){
-        return 2;
+        return 6;
     }
     else if(team=="KKR"){
-        return 2;
+        return 7;
     }
     else if(team=="SRH"){
-        return 2;
+        return 8;
     }
 };
 
